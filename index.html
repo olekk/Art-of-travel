@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Art of TRAVEL</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Quicksand:400,900" rel="stylesheet" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+
+
+    <!-- JS dla przewijania -->
+    <script>
+        jQuery(function($) {
+            //zresetuj scrolla
+            $.scrollTo(0);
+
+            $('#link0').click(function() {
+                $.scrollTo($('#pierszy'), 500);
+            });
+            $('#link1').click(function() {
+                $.scrollTo($('#drugi'), 500);
+            });
+            $('#link2').click(function() {
+                $.scrollTo($('#trzeci'), 500);
+            });
+            $('#link3').click(function() {
+                $.scrollTo($('#fourth'), 500);
+            });
+            $('#link4').click(function() {
+                $.scrollTo($('#fourth'), 500);
+            });
+        });
+
+    </script>
+    <!-- Koniec JS dla przewijania -->
+</head>
+
+<body onload="zmienslajd()">
+
+    <nav>
+        <div id="navcenter">
+            <a id="link0" href="#"><img src="img/logo.png" /> <span> Art of <u>TRAVEL</u></span></a>
+            
+            <div id="rozw"><span>&#9776;</span>
+                <div id="menu">
+                    <a id="link1" href="#">
+                        <div class="option">SEARCH</div>
+                    </a>
+                    <a id="link2" href="#">
+                        <div class="option">Cities</div>
+                    </a>
+                    <a id="link3" href="#">
+                        <div class="option">Contact</div>
+                    </a>
+                    <a id="link4" href="#">
+                        <div class="option">Feedback</div>
+                    </a>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </nav>
+
+    <div class="page first">
+
+        <div id="pierszy" style="position: absolute; top:-80px;"></div>
+
+        <script type="text/javascript">
+            var numer = Math.floor(Math.random() * 5) + 1;
+
+            var timer1 = 0;
+            var timer2 = 0;
+
+            function ustawslajd(nrslajdu) {
+                clearTimeout(timer1);
+                clearTimeout(timer2);
+                numer = nrslajdu - 1;
+
+                schowaj();
+                setTimeout("zmienslajd()", 500);
+
+            }
+
+            function schowaj() {
+                $("#slider").fadeOut(500);
+            }
+
+            function zmienslajd() {
+                numer++;
+                if (numer > 5) numer = 1;
+
+                var plik = "<img src=\"slajdy/slajd" + numer + ".png\" />";
+
+                document.getElementById("slider").innerHTML = plik;
+                $("#slider").fadeIn(500);
+
+                timer1 = setTimeout("zmienslajd()", 5000);
+                timer2 = setTimeout("schowaj()", 4500);
+
+            }
+
+        </script>
+        <div id="slider"></div>
+
+        <div id="quotes"></div>
+
+        <div id="spany">
+            <span onclick="ustawslajd(1)" style="cursor:pointer;">◉</span>
+            <span onclick="ustawslajd(2)" style="cursor:pointer;">◉</span>
+            <span onclick="ustawslajd(3)" style="cursor:pointer;">◉</span>
+            <span onclick="ustawslajd(4)" style="cursor:pointer;">◉</span>
+            <span onclick="ustawslajd(5)" style="cursor:pointer;">◉</span>
+        </div>
+
+        <div class="cien"></div>
+
+    </div>
+    <div class="page" id="second">
+        <div id="drugi" style="position: absolute; top:-80px;"></div>
+
+        <span>
+              <h2>About us</h2>
+               Art of TRAVEL is a website which aims to curious people on holidays who want to experience diffrent activities than just sunbathing or boring walking through city without a target. By choosing a city you want to explore you will recieve informations about the best places to see, best attractions - cheap or more expensive. You can also find a hotel in the best location.<a style="color:transparent;"> ur mom gay</a>
+           </span>
+
+        <div id="szukaj">
+            <input type="text" placeholder="Search: ">
+            <button type="submit">&#x1F50D;</button>
+            <div style="clear: both;"></div>
+        </div>
+        <div id="mapa"></div>
+    </div>
+
+    <div class="page" id="third">
+        <div id="trzeci" style="position: absolute; top:-80px;"></div>
+
+        <a href="dresden.html">
+            <div class="kafel">
+                <img src="squares/drezno2.png">
+                <span>
+                <h4>Dresden</h4>
+                 is city with really deep history, so you can see there a piece of great architecture. Good for you if you prefer visiting places with amazing buildings.
+             </span>
+            </div>
+        </a>
+
+        <a href="dubrovnik.html">
+            <div class="kafel">
+                <img src="squares/dubrovnik2.png">
+                <span>
+                <h4>Dubrovnik</h4>
+                is a Croatian city on the Adriatic Sea. It is known due to its incredible landscape, which is combination of sea and moutains. Perfect place to go on summer.
+            </span>
+            </div>
+        </a>
+
+        <a href="helsinki.html">
+            <div class="kafel">
+                <img src="squares/helsinki2.png">
+                <span>
+                <h4>Helsinki</h4>
+                is perfect place for you if you love relax near water. Welcome in the capital of the land of a thousand lakes!
+                </span>
+            </div>
+        </a>
+
+        <a href="london.html">
+            <div class="kafel">
+                <img src="squares/london2.png">
+                <span>
+                <h4>London</h4>
+                one of the most popular cities on the world. You can admire a lot of iconic places of the capital of Great Britain</span>
+
+            </div>
+        </a>
+
+        <a href="madrid.html">
+            <div class="kafel">
+                <img src="squares/madrid2.png">
+                <span>
+                <h4>Madrid</h4>
+                warm, relaxing place especially for architecture lovers. Better if you don't mind huge cities. It is one of the biggest in Europe.</span>
+            </div>
+        </a>
+
+        <a href="moscow.html">
+            <div class="kafel">
+                <img src="squares/moscow2.png">
+                <span>
+                <h4>Moscow</h4>
+                 in this city you will see some of the greatest monuments of world architecture. Those will make you really impressed.</span>
+            </div>
+        </a>
+
+        <a href="paris.html">
+            <div class="kafel">
+                <img src="squares/paris2.png">
+                <span>
+                <h4>Paris</h4>
+                definitely one of the most beautiful cities in the world. We are inviting you especially with your partner.</span>
+            </div>
+        </a>
+
+        <a href="rome.html">
+            <div class="kafel">
+                <img src="squares/rome2.png">
+                <span>
+                <h4>Rome</h4>
+                capital of Italy. This place offers to see so many historical objects. Coloseum, pantheon or forum romanum are only
+a few of all of these admirable monumental places</span>
+            </div>
+        </a>
+
+        <a href="saloniki.html">
+            <div class="kafel">
+                <img src="squares/saloniki2.png">
+                <span>
+                <h4>Salonica</h4>
+                is sunny city, which is very pleasant to spend holidays. It is also located on the Aegean Sea.</span>
+            </div>
+        </a>
+
+        <a href="zakopane.html">
+            <div class="kafel">
+                <img src="squares/zakopane2.png">
+                <span>
+                <h4>Zakopane</h4>
+                a beautiful moutain place in south Poland. It lies between Tatra Moutains and Gubalowka Hill. If you like hiking or just going for a long walks, it is place for you.</span>
+            </div>
+        </a>
+
+
+        <div class="cien"></div>
+    </div>
+
+    <div class="page" id="fourth">
+        <footer>
+            <h4>Contact</h4>
+            
+            <br>
+            <s>&#128222; +48 224 444 444</s>
+            
+            <br>
+            
+            <s>&#9993; contact@artoftravel.com</s> 
+            
+            <br>
+            
+            <s><a href="https://facebook.com"><i class="fab fa-facebook-square"></i> Our facebook
+            </a>
+            </s>
+            
+            
+
+        </footer>
+        <footer>
+            <h4>Feedback</h4>
+            <span>Leave us informations about what you think we should improve in our website. We will put it in spam and ignore it. Thank you for your help.</span>
+            <input type="text" name="nickname" placeholder="Your nickname: ">
+            <textarea placeholder="Your message: "></textarea>
+            <button >Upload File <i class="fas fa-upload"></i><img src="img/windowsexplorer.png"/> </button>
+            <a  href="index.html"><button>Submit</button></a>
+
+        </footer>
+        <div id="copy">Copyright &copy; <s>Aleksander Ciesla</s> & <s>Mateusz Tomaszek</s> 2018</div>
+
+    </div>
+
+
+
+
+
+
+    <script src="quotes.js"></script>
+</body>
+
+</html>
+	

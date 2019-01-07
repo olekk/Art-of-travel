@@ -1,0 +1,566 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    overflow-x: hidden;
+}
+
+/* NAVIGATOR */
+
+nav {
+    height: 78px;
+    width: 100%;
+    background-color: #00a072;
+    padding-top: 2px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    opacity: 0.94;
+}
+
+#navcenter {
+    width: 85vw;
+    margin: 0 auto 10px auto;
+
+}
+
+#navcenter a span {
+    font-family: 'Fredoka One', cursive;
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    font-size: 48px;
+}
+
+#navcenter img {
+    position: relative;
+    top: 9px;
+    height: 60px;
+}
+
+u {
+    text-decoration: none;
+    color: yellow;
+}
+
+#menu {
+    margin-top: 15px;
+    float: right;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+}
+
+#rozw
+{
+    float: right;
+    position: relative;
+}
+
+.option {
+    float: left;
+    width: 150px;
+    padding: 10px;
+    border: 0px solid inherit;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.option:hover, #rozw span:hover {
+    background-color: white;
+    color: #00a072;
+}
+
+a {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+/* PAGES */
+
+.page {
+    width: 99.9vw;
+    height: calc(99vh - 80px); //outline: 2px red solid;
+    z-index: 10;
+}
+
+.first {
+    margin-top: 80px;
+    background-color: black;
+    position: relative;
+}
+
+#slider {
+    width: 99.9vw; //outline: 2px red solid;
+    height: calc(99.9vh - 80px);
+    overflow: hidden;
+}
+
+#slider img {
+    width: 99.9vw;
+}
+
+.cien {
+    position: absolute;
+    top: 101%;
+    left: 0;
+    width: 99.9vw;
+    height: 10px;
+    -webkit-box-shadow: 0px 0px 26px 32px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 26px 32px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 26px 32px rgba(255, 255, 255, 1);
+    background-color: white;
+}
+
+
+#quotes {
+    position: absolute;
+    top: calc(30vh - 200px);
+    right: 30px;
+    color: white;
+    width: 50vw;
+    font-size: 3vw;
+    text-align: center;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+
+}
+
+.first #spany {
+    position: absolute;
+    top: calc(99vh - 180px);
+    left: calc(50vw - 100px);
+    color: white;
+    font-size: 40px;
+}
+
+#spany span {
+    transition: color 0.2s ease-in;
+}
+
+#spany span:hover {
+    color: #00a072;
+}
+
+#second {
+    background-image: url(img/pettern.jpg);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    position: relative;
+}
+
+#szukaj {
+    position: relative;
+    top: 7.5vh;
+    left: calc(35vw * 0.4);
+
+}
+
+#szukaj input {
+    display: block;
+    width: 60vw;
+    height: 40px;
+    border-radius: 20px 0 0 20px;
+    margin: 0;
+    border: 5px solid #00a072;
+    padding: 10px;
+    font-size: 40px;
+    float: left;
+    background-color: #00a072;
+    color: white;
+    outline: none;
+
+}
+
+#szukaj button {
+    display: block;
+    height: 70px;
+    border-radius: 0 20px 20px 0;
+    margin: 0;
+    border: 5px solid #00a072;
+    border-left: 0;
+    font-size: 40px;
+    float: left;
+    background-color: #00a072;
+    color: white;
+    outline: none;
+}
+
+#szukaj input:hover,
+#szukaj input:focus,
+textarea:hover,
+textarea:focus {
+    background-color: white;
+    color: #00a072;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: white;
+    opacity: 1;
+    font-family: 'Quicksand', sans-serif;
+}
+
+input::-moz-placeholder {
+    color: white;
+    opacity: 1;
+}
+
+input:hover::placeholder {
+    color: #00a072;
+    opacity: 1;
+}
+
+input:hover::-moz-placeholder {
+    color: #00a072;
+    opacity: 1;
+}
+
+#szukaj button:hover {
+    background-color: white;
+    color: #00a072;
+}
+
+#second span {
+    display: block;
+    font-size: 24px;
+    padding: 20px 100px;
+}
+
+#mapa {
+    margin: 100px auto 0 auto;
+    padding-top: 50px;
+    width: 85vw;
+}
+
+iframe {
+    display: block;
+    width: 85vw;
+}
+
+#third {
+    position: relative;
+    height: 1350px;
+}
+
+#third::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(img/pettern.jpg);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    transform: rotate(180deg);
+}
+
+.kafel {
+    //outline: 1px red solid;
+    width: 50%;
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+    font-size: 24px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.kafel img {
+    width: 220px;
+    height: 220px;
+    display: block;
+    float: left;
+    border: 5px solid #00a072;
+    border-right: 0;
+    opacity: 0.9;
+    border-radius: 20px 0 0 20px;
+}
+
+.kafel span {
+    display: block;
+    float: left;
+    width: calc(100% - 270px);
+    height: 200px;
+    padding: 10px;
+    border: 5px solid #00a072;
+    border-left: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+.kafel:hover span {
+    background-color: #00a072;
+    color: white;
+}
+
+.kafel:hover img {
+    opacity: 1;
+}
+
+h4,
+h2 {
+    margin-top: 2px;
+}
+
+.podstrona {
+    padding: 100px;
+    font-size: 24px;
+    height: 100vh;
+    width: 99.9vw;
+    background-image: url(img/pettern.jpg);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    box-sizing: border-box;
+}
+
+.podstrona img
+{
+    width: 600px;
+    float: left; 
+    padding: 0 20px;
+}
+
+.podstrona ul
+{
+    list-style-position: inside;
+}
+
+#fourth {
+    background-color: #111;
+    color: white;
+    height: 850px;
+}
+
+footer {
+    //outline: 1px red solid;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 100px;
+    padding-bottom: 0px;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+footer span
+{
+    font-size: 22px;
+    display: block;
+    padding-bottom: 25px;
+}
+
+
+b, s
+{
+	font: inherit;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: content-box;
+    transition: all 0.6s ease-out;
+}
+
+s:hover
+{
+    font-size: 35px;
+}
+
+b:hover img
+{
+    display: block !important;
+}
+
+#copy
+{
+    clear: both;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+footer h4
+{
+    margin: 0;
+}
+
+footer s, footer b
+{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+footer input[name="nickname"]
+{
+    width: 50%;
+    height: 1em; 
+}
+
+footer input, textarea{
+    display: block;
+    width: 100%;
+    height: 10em;
+    border-radius: 10px;
+    border: 2px solid #00a072;
+    background-color: #00a072;
+    margin: 15px 0 0 0;
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+    outline: none;
+}
+
+footer button
+{
+    width: 50%;
+    height: 2.5em; 
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #00a072;
+    color: white;
+    font-size: 20px;
+        border-top: 10px solid #11b183;
+        border-right: 10px solid #009061;
+        border-bottom: 10px solid #009061;
+        border-left: 10px solid #11b183;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+button img
+{
+    display: none;
+    position: fixed;
+    z-index: 300;
+    top: 50px;
+    left: 100px;
+}
+
+button:active img
+{
+    display: block;
+}
+
+button:hover
+{
+        border-bottom: 10px solid #11b183;
+        border-right: 10px solid #11b183;
+        border-left: 10px solid #009061;
+        border-top: 10px solid #009061;
+}
+textarea:hover, footer input:hover, textarea:focus, footer input:focus
+{
+    background-color: #111;
+    outline: none;
+    color: #00a072;
+}
+#rozw span
+{
+    display: none;
+}
+@media(max-width: 1290px) {
+    
+    #rozw span
+    {
+        display: block;
+        display: block;
+        color: white;
+        float: right;
+        font-size: 40px;
+        padding: 0 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer
+    }
+    #menu
+    {
+        display: none;
+    }
+    
+    #rozw:hover #menu
+    {
+        display: block;
+        position: absolute;
+        left: -100px;
+        top: 45px;
+        background-color: red;
+        background-color: #00a072;
+        border-radius: 0 0 15px 15px;
+        padding: 5px;
+        overflow: hidden;
+    }
+    #rozw:hover #menu .option
+    {
+        clear: both;
+        margin: 10px; 
+        
+    }
+    
+    #slider img
+    {
+        width: 1290px;
+    }
+    
+    #second span
+    {
+        font-size: 50%;
+    }
+    
+    .kafel
+    {
+        clear: both;
+        width: 100%;
+        font-size: 50%;
+    }
+    
+    #third
+    {
+        min-height: 2700px;
+    }
+    #quotes {
+        top: calc(40vh - 200px);
+    }
+    
+    #navcenter a
+    {
+        display: inline-block;
+        transform: scale(0.74);
+        margin: 0;
+        position: absolute;
+        left: -50px;
+    }
+    #navcenter
+    {
+        margin: 0;
+    }
+}
+
+@media(max-width: 1060px) {
+    footer {
+        clear: both;
+        width: 100%;
+    }
+
+    #fourth {
+        height: 1300px;
+    }
+}
+
+@media(max-width: 590px) {
+    .kafel 
+    {
+        font-size: 0.4em;
+    }
+    
+    #fourth
+    {
+        height: 1400px;
+    }
+}
